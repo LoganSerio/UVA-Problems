@@ -1,19 +1,18 @@
 #include <stdio.h>
 int main() {
-	int n,cnt;
-	scanf("%d",&n);
-	for (int i = 1; i <= n; i++) {
-		scanf("%d",&cnt);
-		int tmp;
+	int testCases,inputCases;
+	int caseNumber = 1;
+	scanf("%d",&testCases);
+	while (testCases--) {
+		scanf("%d",&inputCases);
 		int max = 0;
-		char line[1024];
-		while (fgets(line,1024,stdin)) {
-			while (sscanf(line,"%d",&tmp)!=EOF) {
-				if (tmp > max)
-					max = tmp;
-			}
-			printf("Case %d: %d\n",i,max);
+		int tmp;
+		while (inputCases--) {
+			scanf("%d",&tmp);
+			if (max < tmp)
+				max = tmp;	
 		}
+		printf("Case %d: %d\n",caseNumber++,max);
 	}
 	return 0;
 }
