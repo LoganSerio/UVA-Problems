@@ -10,9 +10,11 @@ for i in range(0,int(n)):
 		ascii[ord(char)] += 1
 	ret = ""
 	
-	for j in ascii:
-		if ascii[j] != 0 and ascii[j] in primes:
-			ret = ret + str(unichr(j))
+	#for j in ascii:
+	for j in range(0,len(ascii)):
+		if ascii[j] != 0:
+			if ascii[j] in primes:
+				ret = ret + str(chr(j))
 	if ret=="":
 		sys.stdout.write("empty")
 	print(ret)
