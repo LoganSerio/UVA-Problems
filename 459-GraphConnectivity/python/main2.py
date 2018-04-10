@@ -35,5 +35,6 @@ for i in splits:
                         if lst[x] == lineList[let]: 
                             lst[x] = changeVal        
     print(len(set(lst)))
-    if not (splits.index(i) == len(splits)-1):
+    #if (splits.index(i) == len(splits)-1):
+    if (splits.index(i) != 0):
         print()
